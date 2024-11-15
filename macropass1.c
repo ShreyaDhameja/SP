@@ -7,7 +7,7 @@
 #define MAX_MNT_LINES 100
 
 void writeMDTFile(char mdt[MAX_MDT_LINES][MAX_LINE_LENGTH], int mdtCount) {
-    FILE *outFile = fopen("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 5,6\\2MDT.txt", "w");
+    FILE *outFile = fopen("MDT.txt", "w");
     int i;
     if (outFile == NULL) {
         printf("Unable to open MDT file for writing.\n");
@@ -21,7 +21,7 @@ void writeMDTFile(char mdt[MAX_MDT_LINES][MAX_LINE_LENGTH], int mdtCount) {
 }
 
 void writeMNTFile(char mnt[MAX_MNT_LINES][MAX_LINE_LENGTH], int mntCount) {
-    FILE *outFile = fopen("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 5,6\\2MNT.txt", "w");
+    FILE *outFile = fopen("MNT.txt", "w");
     int i;
     if (outFile == NULL) {
         printf("Unable to open MNT file for writing.\n");
@@ -35,7 +35,7 @@ void writeMNTFile(char mnt[MAX_MNT_LINES][MAX_LINE_LENGTH], int mntCount) {
 }
 
 void writeIntermediateFile(char lines[][MAX_LINE_LENGTH], int startLine, int totalLines) {
-    FILE *intermediateFile = fopen("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 5,6\\2Intermediatecodemacro.txt", "w");
+    FILE *intermediateFile = fopen("Intermediatecodemacro.txt", "w");
     int i;
     if (intermediateFile == NULL) {
         printf("Unable to open Intermediate file for writing.\n");
@@ -49,7 +49,7 @@ void writeIntermediateFile(char lines[][MAX_LINE_LENGTH], int startLine, int tot
 }
 
 void writeALTFile(char alt[MAX_MNT_LINES][MAX_LINE_LENGTH], int altCount) {
-    FILE *altFile = fopen("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 5,6\\2ALT.txt", "w");
+    FILE *altFile = fopen("ALT.txt", "w");
     int i;
     if (altFile == NULL) {
         printf("Unable to open ALT file for writing.\n");
@@ -151,8 +151,7 @@ void processMacros(const char *inputFileName) {
 }
 
 int main() {
-    const char *inputFileName = "C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 5,6\\2macro.txt";
+    const char *inputFileName = "macro.txt";
     processMacros(inputFileName);
     return 0;
 }
-
