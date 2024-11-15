@@ -262,12 +262,12 @@ void display_tables(char *symbol_file, char *literal_file, char *pool_file, char
 }
 
 int main(int argc, char *argv[]) {
-    char input_file[100] = "C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 2,3\\asinput.txt";       
-    char opcode_file[100] = "C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 2,3\\asopcode_table.txt"; 
-    char symbol_file[100] = "C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 2,3\\assymbol_table.txt";  
-    char literal_file[100] = "C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 2,3\\asliteral_table.txt";  
-    char pool_file[100] = "C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 2,3\\aspool_table.txt";  
-    char intermediate_file[100] = "asintermediate_code.txt";  
+    char input_file[100] = "input.txt";       
+    char opcode_file[100] = "opcode_table.txt"; 
+    char symbol_file[100] = "symbol_table.txt";  
+    char literal_file[100] = "literal_table.txt";  
+    char pool_file[100] = "pool_table.txt";  
+    char intermediate_file[100] = "intermediate_code.txt";  
 
     if (argc >= 2) {
         strcpy(input_file, argv[1]);
