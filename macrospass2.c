@@ -23,7 +23,7 @@ void readFileToArray(const char *fileName, char array[][MAX_LINE_LENGTH], int *c
 }
 
 void writeExpandedCodeFile(char expanded[MAX_EXPANDED_LINES][MAX_LINE_LENGTH], int expandedCount) {
-    FILE *outFile = fopen("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 5,6\\2ExpandedCode.txt", "w");
+    FILE *outFile = fopen("ExpandedCode.txt", "w");
     int i;
     if (outFile == NULL) {
         printf("Unable to open ExpandedCode file for writing.\n");
@@ -136,11 +136,10 @@ int main() {
 
     int mntCount, mdtCount;
 
-    readFileToArray("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 5,6\\2MNT.txt", mnt, &mntCount);
-    readFileToArray("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 5,6\\2MDT.txt", mdt, &mdtCount);
+    readFileToArray("MNT.txt", mnt, &mntCount);
+    readFileToArray("MDT.txt", mdt, &mdtCount);
 
-    processPass2("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 5,6\\2Intermediatecodemacro.txt", mnt, mntCount, mdt);
+    processPass2("Intermediatecodemacro.txt", mnt, mntCount, mdt);
 
     return 0;
 }
-
