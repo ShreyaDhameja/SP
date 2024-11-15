@@ -1,0 +1,3 @@
+Literal Table:
+Opcode 	Literal	Address
+01	=8	104

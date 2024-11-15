@@ -1,0 +1,7 @@
+
+START 100
+      MOVER AREG, 20
+      SUB AREG, ='5'
+      MOVER BREG, 30
+      SUB BREG, ='3'
+END

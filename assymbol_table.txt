@@ -1,0 +1,4 @@
+Symbol Table:
+Opcode 	Symbol	Address
+01	A	100
+02	B	101
