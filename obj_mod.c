@@ -40,8 +40,6 @@ int count_code_lines(FILE *input_file) {
     return count;
 }
 
-
-
 void append_relocation_table(const char *relocation_filename, FILE *output_file) {
     FILE *relocation_file = fopen(relocation_filename, "r");
     if (!relocation_file) {
@@ -94,8 +92,8 @@ void append_machine_code(const char *machine_code_filename, FILE *output_file) {
 }
 
 int main() {
-    FILE *input_file = fopen("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\SP C2P2\\1\\c2p2inputfile.txt", "r");
-    FILE *output_file = fopen("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\SP C2P2\\2\\object_module.txt", "w");
+    FILE *input_file = fopen("inputfile.txt", "r");
+    FILE *output_file = fopen("object_module.txt", "w");
     if (!input_file || !output_file) {
         perror("Error opening files");
         exit(EXIT_FAILURE);
@@ -118,9 +116,9 @@ int main() {
     fprintf(output_file, "Code Size: %d\n", code_size);
     fprintf(output_file, "Start Address: %d\n", adjusted_start_address);
 
-    append_machine_code("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\SP C2P2\\1\\c2p2machinecode.txt", output_file);
-    append_relocation_table("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\SP C2P2\\2\\c2p2relocation_table.txt", output_file);
-    append_link_table("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\SP C2P2\\2\\c2p2link_table.txt", output_file);
+    append_machine_code("machinecode.txt", output_file);
+    append_relocation_table("relocation_table.txt", output_file);
+    append_link_table("link_table.txt", output_file);
 
     fclose(input_file);
     fclose(output_file);
