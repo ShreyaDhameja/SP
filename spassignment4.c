@@ -155,13 +155,13 @@ void generate_machine_code(char *intermediate_file, char *machine_code_file, Tab
 }
 
 int main(int argc, char *argv[]) {
-    char intermediate_file[100] = "C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 2,3\\asintermediate_code.txt";
-    char machine_code_file[100] = "C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 2,3\\asmachine_code.txt";
+    char intermediate_file[100] = "intermediate_code.txt";
+    char machine_code_file[100] = " machine_code.txt";
 
     TableEntry *literal_table = NULL;
     TableEntry *symbol_table = NULL;
-    int literal_count = load_literal_table("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 2,3\\asliteral_table.txt", &literal_table);
-    int symbol_count = load_symbol_table("C:\\Users\\DELL\\OneDrive\\Desktop\\SP PRACTICAL\\Assignments 2,3\\assymbol_table.txt", &symbol_table);
+    int literal_count = load_literal_table("literal_table.txt", &literal_table);
+    int symbol_count = load_symbol_table("symbol_table.txt", &symbol_table);
 
     if (argc >= 2) {
         strcpy(intermediate_file, argv[1]);
@@ -179,5 +179,3 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-
-
