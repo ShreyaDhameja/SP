@@ -1,0 +1,41 @@
+Input :
+MACRO
+SUBTRACT &X, &Y
+    MOVER AREG, &X
+    SUB AREG, ='5'
+    MOVER BREG, &Y
+    SUB BREG, ='3'
+MEND
+
+START 100
+SUBTRACT 20, 30
+END
+
+MNT :
+1   SUBTRACT
+
+MDT :
+1   SUBTRACT &X, &Y
+2       MOVER AREG, #1
+3       SUB AREG, ='5'
+4       MOVER BREG, #2
+5       SUB BREG, ='3'
+6   MEND
+
+ALT :
+1   &X
+
+2   &Y
+
+IC :
+START 100
+SUBTRACT 20, 30
+END
+
+Expanded Code :
+START 100
+      MOVER AREG, 20
+      SUB AREG, ='5'
+      MOVER BREG, 30
+      SUB BREG, ='3'
+END
