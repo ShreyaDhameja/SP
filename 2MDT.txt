@@ -1,6 +1,0 @@
-1   SUBTRACT &X, &Y
-2       MOVER AREG, #1
-3       SUB AREG, ='5'
-4       MOVER BREG, #2
-5       SUB BREG, ='3'
-6   MEND
